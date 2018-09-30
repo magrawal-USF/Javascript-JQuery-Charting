@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title>JavaScript user input</title>
+  <script>
+    function getUserInput() {
+
+      var city1 = prompt("What is the first of 4 cities?", "Tampa");
+      var city2 = prompt("What is the second of 4 cities?", "Tampa");
+      var city3 = prompt("What is the third of 4 cities?", "Tampa");
+      var city4 = prompt("What is the fourth of 4 cities?", "Tampa");
+
+      var cities = [city1, city2, city3, city4];
+
+      var ulElement = document.createElement("ul");
+
+      for (var city in cities) {
+
+        var cityListItem = document.createElement("li");
+        var cityListItemtext = document.createTextNode(cities[city]);
+        cityListItem.appendChild(cityListItemtext);
+
+        var listItem = ulElement.appendChild(cityListItem);
+      }
+
+      var bodyNode = document.getElementsByTagName("body")[0];
+      bodyNode.appendChild(ulElement);
+    }
+  </script>
+</head>
+
+<body>
+  <h1>JavaScript user input</h1>
+
+  <button onclick="getUserInput()">Click me</button>
+
+</body>
+
+</html>

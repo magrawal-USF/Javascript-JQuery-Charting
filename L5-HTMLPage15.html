@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Variable scope</title>
+  <script>
+
+    var x1 = 5;
+    var x2 = 7;
+
+    function getUserInput() {
+
+      alert(x1 + x2);
+
+      addNumbers1();
+      addNumbers2();
+
+      alert(x1 + x2);
+    }
+
+    function addNumbers1() {
+
+      var x1 = 27;
+      var x2 = 29;
+
+      alert(x1 + x2);
+    }
+
+    function addNumbers2() {
+
+      x1 = 15;
+      alert(x1 + x2);
+    }
+  </script>
+</head>
+
+<body>
+  <h1>JavaScript user input</h1>
+
+  <button onclick="getUserInput()">Click me</button>
+
+</body>
+
+</html>

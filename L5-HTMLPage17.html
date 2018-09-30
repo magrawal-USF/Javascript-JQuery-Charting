@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title>JavaScript user input</title>
+  <script>
+    function getUserInput() {
+
+      var cities = ["Tampa", "Orlando", "Miami", "Naples"];
+
+      var ulElement1 = document.createElement("ul");
+      var ulElement2 = document.createElement("ul");
+
+      for (var city in cities) {
+
+        var cityListItem1 = document.createElement("li");
+        var cityListItemtext1 = document.createTextNode(cities[city]);
+        cityListItem1.appendChild(cityListItemtext1);
+
+        var listItem = ulElement1.appendChild(cityListItem1);
+
+        var cityListItem2 = document.createElement("li");
+        var cityListItemtext2 = document.createTextNode(cities[city]);
+        cityListItem2.appendChild(cityListItemtext2);
+
+        listItem = ulElement2.appendChild(cityListItem2);
+      }
+
+      
+      alert("adding to header");
+      var rootNode = document.getElementById("root"); // adding to header
+      rootNode.innerHTML = "Look what I did!";
+      //rootNode.appendChild(ulElement1);
+      rootNode.appendChild(ulElement2);
+      
+      alert("Adding to body");
+      var bodyNode = document.getElementsByTagName("body")[0]; // adding to body
+      bodyNode.appendChild(ulElement1);
+
+      alert("Removing child");
+      var removedChild = ulElement1.removeChild(ulElement1.childNodes[2]); // removing child
+    }
+  </script>
+</head>
+
+<body>
+  <h1 id="root">JavaScript user input</h1>
+
+  <button onclick="getUserInput()">Click me</button>
+
+</body>
+
+</html>

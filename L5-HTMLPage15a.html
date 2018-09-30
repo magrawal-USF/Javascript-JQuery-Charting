@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Variable scope</title>
+  <script>
+    function addNumbers() {
+      var x1 = 3;
+      var x2 = 4;
+
+      var sum = doAddition(x1, x2);
+
+      alert("The sum of " + x1 + " and " + x2 + " is " + sum);
+    }
+
+    function doAddition(input1, input2) {
+      var result = input1 + input2;
+      return (result);
+    }
+  </script>
+</head>
+
+<body>
+  <h1>JavaScript user input</h1>
+  <button onclick="addNumbers()">Arguments and returns</button>
+</body>
+</html>

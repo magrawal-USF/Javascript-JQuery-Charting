@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title>switch</title>
+  <script>
+    function getUserInput() {
+
+      var name = prompt("What's your name?", "University of South Florida");
+
+      alert("Welcome " + name + "!");
+      alert("Welcome " + name.toLowerCase() + "!");
+      alert("Welcome, your name has " + name.length + " characters!");
+      alert("Welcome, South is at position " + name.indexOf("South"));
+    }
+  </script>
+</head>
+
+<body>
+  <h1>JavaScript user input</h1>
+
+  <button onclick="getUserInput()">Click me</button>
+
+</body>
+
+</html>

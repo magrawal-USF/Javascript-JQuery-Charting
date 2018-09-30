@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title>try ... catch</title>
+  <script>
+
+    function getUserInput() {
+
+      var num = 5;
+      var den1 = 0;
+      var den2 = "zero";
+
+      try {
+        var z = num / den1;
+        alert(z);
+
+        z = num / den2;
+        alert(z);
+      } catch (error) {
+        alert(error);
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>JavaScript user input</h1>
+
+  <button onclick="getUserInput()">Click me</button>
+
+</body>
+
+</html>

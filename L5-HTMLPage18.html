@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title>JavaScript event handlers</title>
+  <script>
+    function doAlert(msg) {
+      alert(msg);
+    }
+
+    function sayHello1() {
+      alert("Hello world 1!");
+    }
+    function sayHello2() {
+      alert("Hello world 2!");
+    }
+    //var b1 = document.getElementById("button1");
+    //b1.onclick=doAlert("Hello world in script!");
+    //b1.onclick = sayHello;
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+
+      var b1 = document.getElementById("button1");
+      //b1.onclick=doAlert("Hello world in DOMContentLoaded");
+      b1.onclick = sayHello1;
+
+    });
+
+  </script>
+</head>
+
+<body>
+  <h1>JavaScript event handlers</h1>
+
+  <h2>The University of South Florida is a large, public 4-year university offering undergraduate, graduate, specialist and doctoral level degrees. The USF System includes three, separately accredited institutions: USF; USF St. Petersburg; and USF Sarasota-Manatee. Serving more than 50,000 students, the USF System has an annual budget of $1.7 billion and is ranked 45th in the nation for research expenditures among all universities, public or private.</h2>
+
+  <h2>USF is comprised of 14 colleges offering more than 180 undergraduate majors and concentrations—with some of the most populated colleges being USF Health, Arts & Sciences, Business and Engineering. We also have numerous degree programs at the graduate, specialist and doctoral levels, including the doctor of medicine. USF prides itself on being a high-impact global research university dedicated to student success.</h2>
+
+  <h2>USF St. Petersburg offers an intimate, waterfront campus environment with smaller classes and an emphasis on community engagement. It offers more than 40 graduate and undergraduate programs in the Colleges of Arts and Sciences, Business and Education.</h2>
+
+  <div><a href="#" onclick="alert('Hello world! #')">Click the # link</a></div>
+  <div><input type="button" value="Click me" onMouseOver="alert('Over the button!!!');" onfocus="alert('Hello world!');" onclick="alert('Hello world!');"/></div>
+  <div><a href="JavaScript:void(0)" onclick="alert('Hello world! void')">Click the void link</a></div>
+  <div><a href="JavaScript:void(0)" onclick="var greeting = 'Hello World!'; doAlert(greeting);">Click the function link</a></div>
+  <div><input id="button1" type="button" value="Click me"/></div>
+
+  <!-- https://stackoverflow.com/questions/9899372/pure-javascript-equivalent-of-jquerys-ready-how-to-call-a-function-when-t -->
+  <script>
+    var b2 = document.getElementById("button1");
+    //b2.onclick = doAlert("Hello world in script!");
+    b2.onclick = sayHello2;
+  </script>
+</body>
+</html>

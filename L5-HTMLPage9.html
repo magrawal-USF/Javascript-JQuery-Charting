@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title>JavaScript user input</title>
+  <script>
+    function getUserInput() {
+
+      var x = ["Tampa", "Miami", "Orlando", "Naples"];
+      x[0] = "Jacksonville";
+      x.push("Tampa");
+
+      var y = ["Atlanta", "Augusta", "Columbus", "Macon"];
+
+      x = x.concat(y);
+    }
+  </script>
+</head>
+
+<body>
+  <h1>JavaScript user input</h1>
+
+  <button onclick="getUserInput()">Click me</button>
+
+</body>
+
+</html>

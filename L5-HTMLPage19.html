@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title>JQuery</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"
+          integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+          crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+          integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+          crossorigin="anonymous"></script>
+  <link href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"
+        rel="stylesheet">
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      // apply event handlers here
+      $("h1").css("color", "#0088ff");
+      $(".colored").addClass("emphasis");
+      $("#studentsList").addClass("bright");
+    });
+  </script>
+
+  <style>
+    .emphasis {
+      font-style: italic;
+      font-size: 2em;
+      background-color: red;
+    }
+
+    .bright {
+      font-weight: bold;
+      font-size: 3em;
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>JQuery demo</h1>
+
+  <p class="colored">The University of South Florida is a large, public 4-year university offering undergraduate, graduate, specialist and doctoral level degrees. The USF System includes three, separately accredited institutions: USF; USF St. Petersburg; and USF Sarasota-Manatee. Serving more than 50,000 students, the USF System has an annual budget of $1.7 billion and is ranked 45th in the nation for research expenditures among all universities, public or private. </p>
+  
+  <h1>Founded: 1956</h1>
+  <h1 class="colored">Undergraduates: 37,027</h1>
+  <h1 id="studentsList" class="colored">Graduate Students: 10,810</h1>
+
+</body>
+</html>

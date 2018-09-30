@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title>JQuery UI</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"
+          integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+          crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+          integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+          crossorigin="anonymous"></script>
+  <link href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"
+        rel="stylesheet">
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("input").datepicker();
+    });
+  </script>
+</head>
+
+<body>
+  <h1>JQuery UI demo</h1>
+
+  <form>
+    First name: <input type="text" name="firstname"><br>
+    Last name: <input type="text" name="lastname">
+  </form>
+
+  <h1 id="schoolProp-1">Founded: 1956</h1>
+  <h1 id="schoolProp-2">Undergraduates: 37,027</h1>
+  <h1 id="schoolProp-3">Graduate Students: 10,810</h1>
+
+  <div id="log"></div>
+</body>
+</html>

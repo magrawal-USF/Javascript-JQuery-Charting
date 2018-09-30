@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title>JavaScript DOM manipulation</title>
+  <script>
+    function showCities() {
+      var cities = ["Tampa", "Valrico", "New York", "Bangalore"];
+
+      var ulElement = document.getElementById("cityList");
+
+      for (var city in cities) {
+
+        var cityListItem = document.createElement("li");
+        var cityListItemtext = document.createTextNode(cities[city]);
+        cityListItem.appendChild(cityListItemtext);
+
+        var listItem = ulElement.appendChild(cityListItem);
+
+      }
+    }
+  </script>
+</head>
+
+<body onload="showCities()">
+  <h1>JavaScript DOM manipulation</h1>
+
+  <ul id="cityList"></ul>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title>switch</title>
+  <script>
+    function getUserInput() {
+
+      var cities = ["Tampa", "Orlando", "Miami", "Naples"];
+
+      for (var city in cities) {
+
+        switch (cities[city]) {
+          case "Tampa":
+            alert("Welcome home to " + cities[city]);
+            break;
+
+          case "Orlando":
+            alert("Welcome to Mickey's town, " + cities[city]);
+            break;
+
+          case "Miami":
+            alert("Welcome to the south in " + cities[city]);
+            break;
+
+          case "Naples":
+            alert("Welcome to the gulf coast in " + cities[city]);
+            break;
+        }
+
+        var ulElement = document.createElement("ul");
+
+        var cityListItem = document.createElement("li");
+        var cityListItemtext = document.createTextNode(cities[city]);
+        cityListItem.appendChild(cityListItemtext);
+
+        var listItem = ulElement.appendChild(cityListItem);
+      }
+
+      var bodyNode = document.getElementsByTagName("body")[0];
+      bodyNode.appendChild(ulElement);
+    }
+  </script>
+</head>
+
+<body>
+  <h1>JavaScript user input</h1>
+
+  <button onclick="getUserInput()">Click me</button>
+
+</body>
+
+</html>

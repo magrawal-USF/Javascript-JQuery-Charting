@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title>switch</title>
+  <script>
+    function getUserInput() {
+
+      var name = prompt("How old are you", "17");
+
+      alert("You will be 25 in " + (25 - name) + " years");
+      alert("In 8 years, you will be " + (name + 8) + " years old");
+
+      alert("You will be 25 in " + (25 - parseInt(name)) + " years");
+      alert("In 8 years, you will be " + (parseInt(name) + 8) + " years old");
+
+      var x = parseFloat(name);
+    }
+
+    function JavaScriptNumbersFun(inputDataArray) {
+
+      var sum = 0;
+
+      for (i in inputDataArray) {
+        sum = sum + i;
+      }
+
+      var mean = sum / inputDataArray.length;
+      alert(mean);
+    }
+  </script>
+</head>
+
+<body>
+  <h1>JavaScript user input</h1>
+
+  <div><button onclick="getUserInput()">Click me</button></div><p></p>
+
+  <div><button onclick="JavaScriptNumbersFun([3, 4, 5])">Numbers fun in JavaScript</button></div>
+</body>
+
+</html>
